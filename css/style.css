@@ -1,85 +1,735 @@
-.gentium-book-plus-regular {
-  font-family: "Gentium Book Plus", serif;
-  font-weight: 400;
-  font-style: normal;
+/* Reset e Variáveis */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.gentium-book-plus-bold {
-  font-family: "Gentium Book Plus", serif;
-  font-weight: 700;
-  font-style: normal;
+:root {
+  --primary-color: #3a6030;
+  --primary-dark: #2a4a22;
+  --secondary-color: #d4a574;
+  --bg-color: #f5f1e8;
+  --text-color: #2c2c2c;
+  --light-color: #ffffff;
+  --accent-color: #8b7355;
+  --transition: all 0.3s ease;
 }
 
-.gentium-book-plus-regular-italic {
+body {
   font-family: "Gentium Book Plus", serif;
-  font-weight: 400;
-  font-style: italic;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.gentium-book-plus-bold-italic {
-  font-family: "Gentium Book Plus", serif;
-  font-weight: 700;
-  font-style: italic;
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.edu-nsw-act-cursive-<uniquifier> {
+/* Header e Navegação */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand {
   font-family: "Edu NSW ACT Cursive", cursive;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  font-weight: 600;
 }
 
-body{
-  background-color: #eed
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
-header{
+
+.nav-link {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
   position: relative;
-  top: 0px;
-  left: 0px;
-  background-color: #3a6030;
-}
-a{
-  color: #fff;
 }
 
-.home{
-  padding: 100px;
-  border: 1px solid #000;
-  border-radius: 10px;
-   display: flex;          /* Alinha os filhos (texto e imagem) lado a lado */
-  align-items: center;    /* Alinha verticalmente o texto e a imagem ao centro */
-  justify-content: space-between; /* Cria um espaçamento equilibrado entre os dois */
-  gap: 40px;
-  background-color: #3a6030;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: var(--transition);
 }
-.home-content{
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-menu-btn span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-color);
+  transition: var(--transition);
+}
+
+/* Seção Home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 100px 80px;
+  gap: 60px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  margin-top: 0;
+}
+
+.home-content {
   flex: 1;
+  color: var(--light-color);
 }
-.home-img{
+
+.home-img {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#home-h5{
- font-family: "Edu NSW ACT Cursive", cursive;
- font-weight: 400;
- font-size: 20px;
+
+.home-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 4px solid var(--secondary-color);
 }
-#home-h1{
+
+#home-h5 {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+#home-h1 {
   font-family: "Gentium Book Plus", serif;
   font-style: italic;
-  font-weight: 600;
-  font-size: 50px;
-  display:flex;
-  justify-content: space-between;
-  
-}
-#home-img{
-  display:flex;
-  justify-content: space-between;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 
-.block-h2{
+#home-h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Botões */
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
   font-family: "Gentium Book Plus", serif;
-  font-style: normal;
-  font-size: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+  background-color: #c49a64;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--light-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seções Gerais */
+.section {
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  font-family: "Gentium Book Plus", serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 20px auto 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+}
+
+/* Grid de Obras */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.work-card {
+  background-color: var(--light-color);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.work-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+  font-size: 3rem;
+}
+
+.work-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.work-card p {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.work-card .btn-small {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: 2px solid var(--primary-color);
+}
+
+.work-card .btn-small:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Grid da Loja */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background-color: var(--light-color);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+  font-size: 2.5rem;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.product-card .btn-primary {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #c49a64 100%);
+  color: var(--primary-dark);
+  border: none;
+}
+
+.product-card .btn-primary:hover {
+  background: linear-gradient(135deg, #c49a64 0%, var(--secondary-color) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.5);
+}
+
+/* Seção Sobre Mim */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.about-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+  font-size: 4rem;
+}
+
+/* Seção Contato */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  font-family: "Gentium Book Plus", serif;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--light-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(58, 96, 48, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--light-color);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  border: 3px solid var(--secondary-color);
+}
+
+.modal-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 3rem;
+  color: var(--light-color);
+  font-weight: bold;
+}
+
+.modal-content h3 {
+  font-family: "Gentium Book Plus", serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: var(--accent-color);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.modal-close {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animações */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .home {
+    flex-direction: column;
+    padding: 120px 30px 60px;
+    text-align: center;
+  }
+
+  .home-content {
+    text-align: center;
+  }
+
+  .home-description {
+    margin: 0 auto 30px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  #home-h1 {
+    font-size: 3rem;
+  }
+
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-placeholder {
+    height: 300px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    transform: translateY(-150%);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .home {
+    padding: 100px 20px 60px;
+  }
+
+  #home-h1 {
+    font-size: 2.5rem;
+  }
+
+  #home-h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    padding: 1rem;
+  }
+
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  #home-h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
 

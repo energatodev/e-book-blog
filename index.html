@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>William Mateus - Escritor Indie</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,45 +11,173 @@
   </head>
   <body>
     <header>
-      <nav style="text-align: left;
-        margin: 5px;">
-        <a href="#works-h2">Minhas Obras</a>
-        <a href="#about-h2">Sobre Mim</a>
-        <a href="#contact-h2">Contato</a>
+      <nav class="nav-menu">
+        <div class="nav-brand">William Mateus</div>
+        <div class="nav-links">
+          <a href="#home" class="nav-link">Início</a>
+          <a href="#works" class="nav-link">Minhas Obras</a>
+          <a href="#shop" class="nav-link">Loja</a>
+          <a href="#about" class="nav-link">Sobre Mim</a>
+          <a href="#contact" class="nav-link">Contato</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
-    
-    <div class="home">
-      <div class="home-content">
+
+    <section id="home" class="home">
+      <div class="home-content fade-in">
         <h5 id="home-h5">Olá, eu sou...</h5>
         <h1 id="home-h1">William Mateus</h1>
         <h2 id="home-h2">Estudante e Escritor</h2>
+        <p class="home-description">Escrevendo histórias que tocam a alma e despertam a imaginação.</p>
+        <div class="home-buttons">
+          <a href="#works" class="btn btn-primary">Conhecer Obras</a>
+          <a href="#shop" class="btn btn-secondary">Visitar Loja</a>
+        </div>
       </div>
-      <div class="home-img">
-        <img src="assets/men.webp">
+      <div class="home-img fade-in">
+        <img src="assets/men.webp" alt="William Mateus">
+      </div>
+    </section>
+
+    <section id="works" class="section scroll-animate">
+      <div class="container">
+        <h2 class="section-title">Minhas Obras</h2>
+        <div class="works-grid">
+          <div class="work-card">
+            <div class="work-placeholder"></div>
+            <h3>Título da Obra 1</h3>
+            <p>Uma breve descrição emocionante sobre este livro que cativará os leitores desde a primeira página.</p>
+            <a href="#shop" class="btn btn-small">Ver na Loja</a>
+          </div>
+          <div class="work-card">
+            <div class="work-placeholder"></div>
+            <h3>Título da Obra 2</h3>
+            <p>Uma jornada épica através de mundos fantásticos e personagens inesquecíveis.</p>
+            <a href="#shop" class="btn btn-small">Ver na Loja</a>
+          </div>
+          <div class="work-card">
+            <div class="work-placeholder"></div>
+            <h3>Título da Obra 3</h3>
+            <p>Uma história de amor e superação que tocará seu coração de forma única.</p>
+            <a href="#shop" class="btn btn-small">Ver na Loja</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section scroll-animate">
+      <div class="container">
+        <h2 class="section-title">Loja</h2>
+        <p class="section-subtitle">Adquira meus livros e produtos exclusivos</p>
+        <div class="shop-grid">
+          <div class="product-card">
+            <div class="product-placeholder"></div>
+            <h3>Livro - Título 1</h3>
+            <p class="product-price">R$ 39,90</p>
+            <button class="btn btn-primary btn-small">Comprar</button>
+          </div>
+          <div class="product-card">
+            <div class="product-placeholder"></div>
+            <h3>Livro - Título 2</h3>
+            <p class="product-price">R$ 45,90</p>
+            <button class="btn btn-primary btn-small">Comprar</button>
+          </div>
+          <div class="product-card">
+            <div class="product-placeholder"></div>
+            <h3>E-book Completo</h3>
+            <p class="product-price">R$ 19,90</p>
+            <button class="btn btn-primary btn-small">Comprar</button>
+          </div>
+          <div class="product-card">
+            <div class="product-placeholder"></div>
+            <h3>Edição Especial</h3>
+            <p class="product-price">R$ 79,90</p>
+            <button class="btn btn-primary btn-small">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section scroll-animate">
+      <div class="container">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Olá! Sou William Mateus, um escritor apaixonado por criar histórias que transportam leitores para mundos incríveis. Minha jornada como autor começou há alguns anos, quando descobri que as palavras tinham o poder de transformar realidades.</p>
+            <p>Como estudante e escritor, dedico meu tempo a explorar diferentes gêneros literários, sempre buscando evoluir e oferecer aos meus leitores experiências únicas e memoráveis. Acredito que cada livro é uma porta para uma nova aventura.</p>
+            <p>Meu objetivo é inspirar pessoas através da literatura, criando narrativas que ressoem com os sentimentos mais profundos do ser humano. Quando não estou escrevendo, estou lendo, pesquisando ou imaginando novos universos para compartilhar com vocês.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Livros Publicados</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Leitores</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Anos de Escrita</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="about-placeholder"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section scroll-animate">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p>Quer entrar em contato? Ficarei feliz em responder suas perguntas, receber feedbacks ou conversar sobre meus livros!</p>
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <span>contato@williammateus.com</span>
+            </div>
+            <div class="contact-item">
+              <strong>Redes Sociais:</strong>
+              <div class="social-links">
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Facebook</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 William Mateus. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-icon">✓</div>
+        <h3>Mensagem Enviada!</h3>
+        <p>Obrigado pelo contato! Responderei o mais breve possível.</p>
+        <button class="btn btn-primary modal-close">Fechar</button>
       </div>
     </div>
 
-    <div class="blocks" style="text-align: center;">
-      <div class="works-block">
-        <h2 id="works-h2" class="block-h2">Minhas Obras</h2>
-        <p id="works-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at bibendum urna. Fusce ultricies luctus auctor. Maecenas imperdiet lacus lectus, eget efficitur nunc interdum sed. Nam tristique lacinia risus sit amet dapibus. Nulla laoreet, nulla non mattis facilisis, dolor metus dignissim purus, vitae feugiat diam nisi nec felis. Donec et ex id neque blandit sodales et non ante. Curabitur dapibus aliquet elit, non rhoncus metus gravida sed.
-
-Suspendisse potenti. Donec ultricies urna vitae nunc posuere, at pharetra massa sagittis. Sed et porttitor lorem. Aenean in dignissim urna. Curabitur a pulvinar erat. Proin in enim commodo, accumsan justo eu, iaculis velit. Etiam ultricies ac turpis eu pharetra. Sed efficitur, magna id mollis auctor, nunc augue hendrerit mi, in dapibus lacus nulla eu urna. Donec sit amet leo vitae eros convallis vulputate. Nunc sed bibendum urna, nec mollis turpis. Pellentesque sit amet auctor nulla. </p>
-      </div>
-      <div class="about-block">
-        <h2 id="about-h2" class="block-h2">Sobre Mim</h2> 
-        <p id="about-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at bibendum urna. Fusce ultricies luctus auctor. Maecenas imperdiet lacus lectus, eget efficitur nunc interdum sed. Nam tristique lacinia risus sit amet dapibus. Nulla laoreet, nulla non mattis facilisis, dolor metus dignissim purus, vitae feugiat diam nisi nec felis. Donec et ex id neque blandit sodales et non ante. Curabitur dapibus aliquet elit, non rhoncus metus gravida sed.
-
-Suspendisse potenti. Donec ultricies urna vitae nunc posuere, at pharetra massa sagittis. Sed et porttitor lorem. Aenean in dignissim urna. Curabitur a pulvinar erat. Proin in enim commodo, accumsan justo eu, iaculis velit. Etiam ultricies ac turpis eu pharetra. Sed efficitur, magna id mollis auctor, nunc augue hendrerit mi, in dapibus lacus nulla eu urna. Donec sit amet leo vitae eros convallis vulputate. Nunc sed bibendum urna, nec mollis turpis. Pellentesque sit amet auctor nulla. </p>
-      </div> 
-      <div class="contact-block"> 
-        <h2 id="contact-h2" class="block-h2">Contato</h2> 
-        <p id="contact-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at bibendum urna. Fusce ultricies luctus auctor. Maecenas imperdiet lacus lectus, eget efficitur nunc interdum sed. Nam tristique lacinia risus sit amet dapibus. Nulla laoreet, nulla non mattis facilisis, dolor metus dignissim purus, vitae feugiat diam nisi nec felis. Donec et ex id neque blandit sodales et non ante. Curabitur dapibus aliquet elit, non rhoncus metus gravida sed.
-
-Suspendisse potenti. Donec ultricies urna vitae nunc posuere, at pharetra massa sagittis. Sed et porttitor lorem. Aenean in dignissim urna. Curabitur a pulvinar erat. Proin in enim commodo, accumsan justo eu, iaculis velit. Etiam ultricies ac turpis eu pharetra. Sed efficitur, magna id mollis auctor, nunc augue hendrerit mi, in dapibus lacus nulla eu urna. Donec sit amet leo vitae eros convallis vulputate. Nunc sed bibendum urna, nec mollis turpis. Pellentesque sit amet auctor nulla. </p>
-      </div>
-    </div>
-      
+    <script src="js/main.js"></script>
   </body>
 </html>
