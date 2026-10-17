@@ -1,0 +1,85 @@
+.gentium-book-plus-regular {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gentium-book-plus-bold {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gentium-book-plus-regular-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gentium-book-plus-bold-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.edu-nsw-act-cursive-<uniquifier> {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body{
+  background-color: #eed
+}
+header{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color: #3a6030;
+}
+a{
+  color: #fff;
+}
+
+.home{
+  padding: 100px;
+  border: 1px solid #000;
+  border-radius: 10px;
+   display: flex;          /* Alinha os filhos (texto e imagem) lado a lado */
+  align-items: center;    /* Alinha verticalmente o texto e a imagem ao centro */
+  justify-content: space-between; /* Cria um espaçamento equilibrado entre os dois */
+  gap: 40px;
+  background-color: #3a6030;
+}
+.home-content{
+  flex: 1;
+}
+.home-img{
+  flex: 1;
+}
+#home-h5{
+ font-family: "Edu NSW ACT Cursive", cursive;
+ font-weight: 400;
+ font-size: 20px;
+}
+#home-h1{
+  font-family: "Gentium Book Plus", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 50px;
+  display:flex;
+  justify-content: space-between;
+  
+}
+#home-img{
+  display:flex;
+  justify-content: space-between;
+}
+
+.block-h2{
+  font-family: "Gentium Book Plus", serif;
+  font-style: normal;
+  font-size: 35px;
+}
+
