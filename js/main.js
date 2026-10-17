@@ -71,16 +71,35 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-// Prevenir envio do formulário (apenas demo)
+// Netlify Forms - Envio via AJAX
 const contactForm = document.querySelector('.contact-form');
 const successModal = document.getElementById('successModal');
 const modalClose = document.querySelector('.modal-close');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    successModal.classList.add('active');
-    contactForm.reset();
+
+    const formData = new FormData(contactForm);
+    formData.append('form-name', 'contact');
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (response.ok) {
+        successModal.classList.add('active');
+        contactForm.reset();
+      } else {
+        alert('Erro ao enviar mensagem. Tente novamente.');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao enviar mensagem. Tente novamente.');
+    }
   });
 }
 

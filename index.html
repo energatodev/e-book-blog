@@ -152,10 +152,12 @@
               </div>
             </div>
           </div>
-          <form class="contact-form">
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="bot-field" />
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
             <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
           </form>
         </div>
